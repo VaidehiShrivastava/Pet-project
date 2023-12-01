@@ -6,7 +6,12 @@
   h1 {
     @apply text-3xl;
   }
+
   h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
     @apply text-xl;
   }
 }
@@ -26,14 +31,106 @@
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font_family_sans);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* 
+  overflow-x: hidden; */
+  /* 10px or 1rem */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% );  /* background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% ); */
+  background-image: radial-gradient(circle 815px at 23.4% -21.8%, rgba(9, 29, 85, 1) 0.2%, rgba(0, 0, 0, 1) 100.2%);
+  /* background-image: radial-gradient( circle 815px at 23.4% -21.8%,  rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2% ); */
+  scroll-behavior: smooth;
+}
 
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+section {
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding: 4rem;
+}
+
+.my_container {
+  margin-inline: auto;
+  width: min(90%, 140.5rem);
+  box-sizing: border-box;
+}
+
+.split_reverse {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image_space {
+  margin-top: 5rem;
+}
+
+.radial_bg {
+  background: radial-gradient(#e66465, #9198e5);
+}
+
+.image_space {
+  margin-top: 5rem;
+}
+
+
+.redyy {
+  background-color: rgba(109, 114, 246, 0.18);
+  transform: scale(1);
+  transition-duration: 1s;
+  padding: 1rem 2rem;
+}
+
+.blueeeyy {
+  background: rgba(34, 25, 75, 1);
+  opacity: 0.5;
+  transform: scale(0.5);
+  transition-duration: 1s;
+  padding: 1rem 2rem;
+}
+
+.curve
+{
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve::before
+{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #000;
+  transform: translate(85%, 65%);
+}
+
+.curve::after
+{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%,46%);
+  z-index: -1
 }
