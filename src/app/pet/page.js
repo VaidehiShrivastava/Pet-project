@@ -1,5 +1,5 @@
 import { getAllPets } from "../_data/PetInformation";
-import PetImage from "../components/PetImage";
+import PetImage from "../_components/PetImage";
 
 function AllPets(props) {
 
